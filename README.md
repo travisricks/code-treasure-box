@@ -5,6 +5,7 @@ A place to keep track of code tips, tricks and tidbits I collect on my developer
 ## JavaScript
 
 - [Create an array from an array-like thing](001_array-like-to-true-array.md)
+- [Use `console.table` to format console messages](002_cosole-table.md)
 
 ## CSS
 
