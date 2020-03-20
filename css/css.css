@@ -1,0 +1,80 @@
+/* 
+Clear floats, baby
+* apply class to parent container
+* class name can be anything, shorter is better in repetition's sake
+* :: means psuedo element (different from pseudo class)
+* Credit: Team Treehouse (learned it) and http://nicolasgallagher.com/micro-clearfix-hack/ (made it)
+*/
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+Create a 'wrapper' to contain the site
+*/
+
+.wrapper {
+    width: 70%; /*could be anything*/
+    margin: 0 auto; /*centers site horizontally*/
+}
+
+/*
+Centering site but keeping a full-width header and footer.
+* separate the layout into 3 divs/sections (header, content, footer)
+* should only need css for the content because header and footer should be width: 100%; by default;
+*/
+
+/*
+Making a Sticky Footer
+* requires having header and content in one div and the footer in a separate div
+*/
+
+.header-content-wrap {
+    min-height: calc(100vh - 89px); /*100% of viewport height minus height of footer (89px)*/
+}
+
+/*
+2 column layout
+*/
+
+div.col {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px; /*removes the default whitespace the browser adds btwn inline and inline-block elements*/
+    vertical-align: top; /*needed when the columns have different heights*/
+    padding: 0 1em; /*adds left/right padding aka gutters*/
+}
+
+/*
+box-sizing the way my brain thinks.
+* should be at start of CSS file, after normalize
+source: http://blog.teamtreehouse.com/box-sizing-secret-simple-css-layouts https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+Float vs Inline-Block
+
+* Use inline-block to lay out navigation items side-by-side or create a simple two-column layout
+* Use inline-block when you need control over center and vertical alignment
+* Use floats to flow content along the left or right side of an element (like an image)
+* Floats do not create default horizontal whitespace between elements
+* Beware of collapsing containers (use clearfix on parent element)
+
+*/
+
+
+
+
+
+
+
+
